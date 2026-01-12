@@ -45,10 +45,10 @@ Depending on the exact prefix structure and the baseline you compare against, th
 
 The table below summarizes measured throughput for PBKDF2-HMAC-SHA256 at different iteration counts. “deriv/s” here means full PBKDF2 derivations per second (equivalent to H/s in this context). Hashcat figures should be treated as **benchmark-mode** results on optimized kernels; your exact numbers will vary with driver version, clocks, and kernel choice.
 
-| Iterations | Custom Speed (deriv/s) | Custom Time |                                Hashcat Speed (H/s) | Hashcat Time | Notes                                                                                                                |
+| Iterations | Custom Speed (deriv/s) | Custom Time |                                Hashcat Speed (H/s) | GPU | Notes                                                                                                                |
 | ---------: | ---------------------: | ----------: | -------------------------------------------------: | -----------: | -------------------------------------------------------------------------------------------------------------------- |
-|         64 |            9,757,510.6 |         N/A | ~3,308,400 *(low-iter estimate / comparable mode)* |          N/A | Custom shows ~3× speedup at low iteration counts where precompute dominates. **Match: True** (reference verified).   |
-|        999 |            3,722,074.4 |     0.013 s |                                          3,308,400 |          N/A | Similar throughput; custom benefits from reduced setup overhead per candidate. **Match: True** (reference verified). |
+|         64 |            9,757,510.6 |         N/A | ~3,308,400 *(low-iter estimate / comparable mode)* |          NVIDIA RTX 3080 | Custom shows ~3× speedup at low iteration counts where precompute dominates. **Match: True** (reference verified).   |
+|        999 |            3,722,074.4 |     0.013 s |                                          3,308,400 |          NVIDIA RTX 3080| Similar throughput; custom benefits from reduced setup overhead per candidate. **Match: True** (reference verified). |
 
 Reference hash validation example (custom output matches known-good reference):
 `45904325a0cbd53058c729bac47d91db47c2a6dc5492a20dbce75ddddad88fee`
