@@ -3,6 +3,9 @@
 This repository contains my  personal tests with high-performance benchmark implementation of **PBKDF2-HMAC-SHA256** (and its SHA-256 inner primitives) built around a **pipeline optimized for GPU password-cracking workloads**—specifically the common scenario where you iterate through a wordlist while keeping most of the input structure constant.
 
 In practice, **SHA-256 is often lighter than SHA-512** for portable implementations and tends to map well to GPU architectures due to its **32-bit datapath**, instruction throughput, and register pressure characteristics. The kernel is engineered to minimize redundant work per candidate and maximize arithmetic density.
+<img width="1008" height="334" alt="image" src="https://github.com/user-attachments/assets/0ee520a4-a8d3-4a59-8ca6-75239ce3d053" />
+
+<img width="967" height="301" alt="image" src="https://github.com/user-attachments/assets/28b0e64a-9cbe-4395-b488-d4e13c584680" />
 
 ## Core idea: host-side prefix precomputation (“fixed salt / fixed prefix”)
 
