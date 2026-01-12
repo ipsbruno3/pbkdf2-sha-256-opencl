@@ -69,15 +69,20 @@ PBKDF2 is still deployed across many products and ecosystems, but **iteration co
 **Why it matters:** higher iteration counts raise brute-force cost, but GPU-centric optimization still matters when the attacker/defender workload involves massive candidate throughput or when you’re benchmarking recovery pipelines.
 
 
+````
+The code wasn't fully optimized; it was just a simple idea I had. There's a lot of room for improvement in the code context; loops can be avoided, intermediate functions cut—it looks quite promising.
+````
 
+## 🏅 Bitcoin Recovery Services
 
+If you need authorized brute-force recovery, workload optimization, and high-performance parallel programming (CPU/GPU/OpenCL/CUDA), as well as hardware engineering (FPGA/ASIC) and information security, check out my repositories and reach out to hire my services.
 
+✅ Focus: performance, automation, scalability, and measurable results.
+⚠️ Note: I only work on cases with explicit authorization and proof of ownership and never will ask your seed phsrase!
 
+________
 
-
-
-
-Bruno da Silva
+Enginner: Bruno da Silva
 2026
 
 
